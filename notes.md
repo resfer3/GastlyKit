@@ -17,13 +17,13 @@ of the kernel that's exported into every program's address space when it's loade
 -  
 `code copy`
 
-`
-linux-vdso.so.1 (0x00007ffd0b9b8000)
-libselinux.so.1 => /lib/x86_64-linux-gnu/libselinux.so.1 (0x000077cded9df000)
-libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000077cded600000)
-libpcre2-8.so.0 => /lib/x86_64-linux-gnu/libpcre2-8.so.0 (0x000077cded945000)
-/lib64/ld-linux-x86-64.so.2 (0x000077cdeda45000)
-`
+
+`linux-vdso.so.1 (0x00007ffd0b9b8000)`
+`libselinux.so.1 => /lib/x86_64-linux-gnu/libselinux.so.1 (0x000077cded9df000)`
+`libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000077cded600000)`
+`libpcre2-8.so.0 => /lib/x86_64-linux-gnu/libpcre2-8.so.0 (0x000077cded945000)`
+`/lib64/ld-linux-x86-64.so.2 (0x000077cdeda45000)`
+
 
 Next, we run strace ls and check the libraries that get loaded into memory upon execution.
 
