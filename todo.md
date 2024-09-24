@@ -7,6 +7,9 @@ Classic LD_PRELOAD jynxkit clone
 
 # NOTE TO SELF -> Don't just go and copy the source code, dumbass, that's not the POINT!
 
+TODO:
+1 - hook mkdir, append pathname to file, return mkdir to create dir for user without being detected.
+
 - hook:
   ->readdir() [to hide from ls, our log of ssh file transfers or stuff]
   ->opendir()
