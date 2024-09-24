@@ -17,22 +17,22 @@ of the kernel that's exported into every program's address space when it's loade
 -  
 `code copy`
 
-`
-linux-vdso.so.1 (0x00007ffd0b9b8000)
+```
+linux-vdso.so.1 (0x00007ffd0b9b8000)`
 libselinux.so.1 => /lib/x86_64-linux-gnu/libselinux.so.1 (0x000077cded9df000)
 libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000077cded600000)
 libpcre2-8.so.0 => /lib/x86_64-linux-gnu/libpcre2-8.so.0 (0x000077cded945000)
-/lib64/ld-linux-x86-64.so.2 (0x000077cdeda45000)
-`
+/lib64/ld-linux-x86-64.so.2 (0x000077cdeda45000)`
+```
 
 Next, we run strace ls and check the libraries that get loaded into memory upon execution.
 
 
-`
+```
 access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
 openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libselinux.so.1", O_RDONLY|O_CLOEXEC) = 3
-`
+```
 
 We can see that libselinux.so.1 and libc get executed. But also, earlier, ld.so.preload gets executed.
 
