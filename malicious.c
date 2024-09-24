@@ -25,6 +25,6 @@ struct dirent* readdir(DIR* dirp){
   return entry;
 } 
 
+// mkdir intersect
 
-
-
+int mkdir(const char *pathname, mode_t mode);
