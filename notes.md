@@ -48,5 +48,12 @@ Why it's more beneficial to use the LD_PRELOAD environment variable, instead of 
 Now, if you have root access, you should put it in /etc/ld.so.preload.
 We will be trying it from a root perspective.
 
+### Compile
+gcc -shared -fPIC -o /home/resfer3/fun/GastlyKit/malicious.so /home/resfer3/fun/GastlyKit/malicious.c -ldl
+export LD_PRELOAD=/home/resfer3/fun/GastlyKit/malicious.so
+
+### Goals
+Intercept data and get data, at the end send the data somewhere.
+Create a trigget for a reverse shell 
 
 

